@@ -12,6 +12,7 @@ import chevronRight from '../assets/icons/chevron-right.png'
 export default {
   heart,
   menu,
+  
   search,
   filter,
   left,
