@@ -1,0 +1,17 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
+, "components/common/cards/popular/popularjobcard.style.ts", "components/common/cards/nearby/nearbyjobcard.style.js", "components/common/cards/nearby/NearbyJobCard.jsx", "components/common/cards/popular/PopularJobCard.jsx"  ]
+}
