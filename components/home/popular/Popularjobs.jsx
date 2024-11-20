@@ -18,7 +18,7 @@ const Popularjobs = () => {
   })
   // const isLoading = false;
   // const error = false;
-// console.log(data);
+console.log(data);
 
 
 
