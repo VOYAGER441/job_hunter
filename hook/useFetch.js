@@ -2,13 +2,15 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 // import { API_KEY } from "@/env";
 // import { API_KEY } from "@env";
+import { API_KEY } from '@env';
+
 // console.log(API_KEY);
 
 // const rapidAPI=API_KEY;
-console.log('ppppppp');
+// console.log('ppppppp');
 
-console.log(process.env.API_KEY);
-console.log('xxxxxxxxxx');
+// console.log(process.env.API_KEY);
+// console.log('xxxxxxxxxx');
 
 
 const useFetch = (endpoint, query) => {
@@ -20,7 +22,7 @@ const useFetch = (endpoint, query) => {
     method: "GET",
     url: `https://jsearch.p.rapidapi.com/${endpoint}`,
     headers: {
-      "x-rapidapi-key": `${process.env.API_KEY}`,
+      "x-rapidapi-key": API_KEY,
       "x-rapidapi-host": "jsearch.p.rapidapi.com",
     },
     params: { ...query },
@@ -30,8 +32,8 @@ const useFetch = (endpoint, query) => {
     setIsLoading(true);
     try {
       const response = await axios.request(options);
-      setData(response.data);
-      console.log(response.data);
+      setData(response.data.data);
+      // console.log(response.data);
     } catch (error) {
       console.error(error);
       setError(error);

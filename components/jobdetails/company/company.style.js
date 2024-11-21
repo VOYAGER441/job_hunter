@@ -50,6 +50,13 @@ const styles = StyleSheet.create({
     height: 14,
     tintColor: COLORS.gray,
   },
+  time: {
+    fontSize: SIZES.medium - 2,
+    color: COLORS.primary,
+    fontFamily: FONT.medium,
+    marginLeft:SIZES.medium
+    // float:"right"
+  },
   locationName: {
     fontSize: SIZES.medium - 2,
     color: COLORS.gray,
