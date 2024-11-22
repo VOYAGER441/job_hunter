@@ -1,3 +1,7 @@
+Here’s the updated GitHub README file with the YouTube video link:  
+
+---
+
 # 🕵️‍♂️ Job Hunter  
 
 **Find your dream job with ease!**  
@@ -9,6 +13,9 @@ Job Hunter is a mobile application designed to connect job seekers with opportun
 - **Skill-Based Job Matching**: Discover jobs tailored to your expertise.  
 - **Location Filtering**: Find opportunities near you or in your desired location.  
 - **Customizable Preferences**: Save searches and preferences for a personalized experience.  
+- **Job Types**: Filter job postings by type, such as part-time, full-time, freelance, or internships.  
+- **Search Engine**: Quickly find specific jobs with the built-in search functionality.  
+- **Direct Applications**: Apply for jobs directly through the app for a seamless experience.  
 - **User-Friendly Interface**: Enjoy a clean, easy-to-navigate design.  
 - **Real-Time Updates**: Stay informed with the latest job postings.  
 
@@ -18,6 +25,16 @@ Job Hunter is a mobile application designed to connect job seekers with opportun
 - **Expo**: To streamline development and deployment.  
 - **Node.js (Optional)**: For backend services if applicable.  
 - **Third-Party APIs**: Integration with job listing APIs for dynamic content.  
+
+## 📲 Demo  
+
+🎥 Watch the Job Hunter demo on YouTube:  
+[![Watch the Demo](https://img.youtube.com/vi/aKReNrAC1zM/0.jpg)](https://youtube.com/shorts/aKReNrAC1zM)  
+
+## 📲 Download  
+
+Ready to explore your dream job? Download the APK now:  
+[📥 Download Job Hunter APK](https://drive.google.com/uc?export=download&id=17AC5PVtmwFO0JQREpQjGZNk8UITcagaD)  
 
 ## 📱 Screenshots  
 
@@ -29,8 +46,8 @@ Follow these steps to set up and run the project locally:
 
 1. **Clone the repository**:  
    ```bash  
-   git clone https://github.com/yourusername/job-hunter.git  
-   cd job-hunter  
+   git clone https://github.com/VOYAGER441/job_hunter.git  
+   cd job_hunter  
    ```  
 
 2. **Install dependencies**:  
@@ -51,7 +68,7 @@ Follow these steps to set up and run the project locally:
 
 Contributions are welcome! If you have ideas or find issues, feel free to:  
 
-- Open an issue in the [Issues](https://github.com/yourusername/job-hunter/issues) section.  
+- Open an issue in the [Issues](https://github.com/VOYAGER441/job_hunter/issues) section.  
 - Fork the repository, make changes, and create a pull request.  
 
 ### Contribution Guidelines  
@@ -71,5 +88,8 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-**Built with ❤️ by VOYAGER411 aka Mainak**  
+**Built with ❤️ by VOYAGER441 aka Mainak**  
 
+--- 
+
+Let me know if you want more customizations!
