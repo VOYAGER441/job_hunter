@@ -26,7 +26,7 @@ import {
   handleTelegramShare,
 } from "../../utils/shareUtils";
 
-const tabs = ["About", "Qualification", "Responsibility","Benefits"];
+const tabs = ["About", "Qualification", "Responsibility", "Benefits"];
 
 const jobDetails = () => {
   const params = useGlobalSearchParams();
@@ -106,37 +106,70 @@ const jobDetails = () => {
           headerTitle: "",
         }}
       />
+      <>
+        <ScrollView
+          showsVerticalScrollIndicator={false}
+          refreshControl={
+            <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
+          }
+        >
+          {isLoading ? (
+            <ActivityIndicator size={SIZES.large} color={COLORS.primary} />
+          ) : error ? (
+            <Text>Something went wrong!!</Text>
+          ) : data.length === 0 ? (
+            <Text>No Data</Text>
+          ) : (
+            <View style={{ padding: SIZES.medium, paddingBottom: 100 }}>
+              <Company
+                companyLogo={data[0].employer_logo}
+                jobTitle={data[0].job_title}
+                companyName={data[0].employer_name}
+                location={data[0].job_location}
+                time={data[0].job_posted_human_readable}
+              />
+              <JobTabs
+                tabs={tabs}
+                activeTab={activeTab}
+                setActiveTab={setActiveTab}
+              />
+              {displayTabContain()}
 
-      <ScrollView
-        showsVerticalScrollIndicator={false}
-        refreshControl={
-          <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
-        }
-      >
-        {isLoading ? (
-          <ActivityIndicator size={SIZES.large} color={COLORS.primary} />
-        ) : error ? (
-          <Text>Something went wrong!!</Text>
-        ) : data.length === 0 ? (
-          <Text>No Data</Text>
-        ) : (
-          <View style={{ padding: SIZES.medium, paddingBottom: 100 }}>
-            <Company
-              companyLogo={data[0].employer_logo}
-              jobTitle={data[0].job_title}
-              companyName={data[0].employer_name}
-              location={data[0].job_location}
-              time={data[0].job_posted_human_readable}
-            />
-            <JobTabs
-              tabs={tabs}
-              activeTab={activeTab}
-              setActiveTab={setActiveTab}
-            />
-            {displayTabContain()}
-
-            {/* Apply Link Section */}
-            <View style={{ marginTop: SIZES.medium }}>
+              {/* Apply Link Section */}
+              {/* <View style={{ marginTop: SIZES.medium,zIndex }}>
+              {data[0]?.job_apply_link ? (
+                <TouchableOpacity
+                style={{
+                    backgroundColor: COLORS.primary,
+                    padding: SIZES.small,
+                    borderRadius: SIZES.small,
+                    alignItems: "center",
+                    }}
+                  onPress={() => {
+                    router.push(data[0]?.job_apply_link);
+                  }}
+                  >
+                  <Text style={{ color: COLORS.white, fontSize: SIZES.medium }}>
+                    Apply Now
+                  </Text>
+                </TouchableOpacity>
+              ) : (
+                <Text style={{ color: COLORS.gray, textAlign: "center" }}>
+                  No apply link available.
+                </Text>
+              )}
+            </View> */}
+              {/* <View
+              style={{
+                position: "absolute",
+                bottom: 0,
+                left: 0,
+                right: 0,
+                zIndex: 9,
+                backgroundColor: COLORS.lightWhite,
+                padding: SIZES.medium,
+              }}
+            >
               {data[0]?.job_apply_link ? (
                 <TouchableOpacity
                   style={{
@@ -158,10 +191,17 @@ const jobDetails = () => {
                   No apply link available.
                 </Text>
               )}
+            </View> */}
             </View>
-          </View>
-        )}
-      </ScrollView>
+          )}
+        </ScrollView>
+        <JobFooter
+          url={
+            data[0]?.job_google_link ??
+            "https://careers.google.com/jobs/results/"
+          }
+        />
+      </>
     </SafeAreaView>
   );
 };

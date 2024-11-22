@@ -30,7 +30,7 @@ const Home = () => {
           ),
           headerRight: () => (
             <ScreenHeaderBtn
-              icons={images.profile}
+              icons={images.logo}
               dimension="100%"
               handlePress={undefined}
             />

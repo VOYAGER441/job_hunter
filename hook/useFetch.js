@@ -4,7 +4,7 @@ import axios from "axios";
 // import { API_KEY } from "@env";
 import { API_KEY } from '@env';
 
-// console.log(API_KEY);
+console.log(API_KEY);
 
 // const rapidAPI=API_KEY;
 // console.log('ppppppp');
